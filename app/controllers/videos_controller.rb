@@ -16,12 +16,6 @@ class VideosController < ApplicationController
     video.save
   end
 
-  private
-
-  def video_params
-    params.require(:video).permit(:title, :description, :youtube_id)
-  end
-
   def edit
     @video = Video.find(params[:id])
   end
@@ -30,5 +24,17 @@ class VideosController < ApplicationController
     @video = Video.find(params[:id])
     @video.update(video_params)
     redirect_to root_path
+  end
+
+  def destroy
+    @video = Video.find(params[:id])
+    @video.destroy
+    redirect_to root_path
+  end
+
+  private
+
+  def video_params
+    params.require(:video).permit(:title, :description, :youtube_id)
   end
 end
