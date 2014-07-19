@@ -21,4 +21,14 @@ class VideosController < ApplicationController
   def video_params
     params.require(:video).permit(:title, :description, :youtube_id)
   end
+
+  def edit
+    @video = Video.find(params[:id])
+  end
+
+  def update
+    @video = Video.find(params[:id])
+    @video.update(video_params)
+    redirect_to root_path
+  end
 end
