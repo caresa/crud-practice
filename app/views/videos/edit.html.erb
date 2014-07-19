@@ -17,3 +17,9 @@
 
   <input type="submit" value="submit">
 </form>
+<form action=<%= "/videos/#{params[:id]}" %> method="POST">
+  <input type="submit" value="delete">
+  <input name="_method" type="hidden" value="delete">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+</form>
+
