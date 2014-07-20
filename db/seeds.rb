@@ -36,3 +36,14 @@ Video.create([
     user_id: 1
   }
   ])
+
+Sound.create([
+  {
+  title: 'MKS file',
+  soundcloud_url: 'https://soundcloud.com/makersquare/files',
+  },
+  {
+  title: 'MKS sitcom',
+  soundcloud_url: 'https://soundcloud.com/makersquare/sitcom-don'
+  }
+  ])

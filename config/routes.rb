@@ -1,13 +1,25 @@
 Metube::Application.routes.draw do
-  root to: "videos#index"
-  resources :videos
-  # get "/videos", to: "videos#index"
-  # get "/videos/new", to: "videos#new"
-  # get "/videos/:id", to: "videos#show"
-  # post '/videos', to: 'videos#create'
-  # get '/videos/:id/edit', to: 'videos#edit'
-  # put "/videos/:id", to: "videos#update"
-  # delete '/videos/:id', to: 'videos#destroy'
+  root to: "sounds#index"
+  # resources :videos
+
+  get "/sounds", to: "sounds#index"
+  get "/sounds/new", to: "sounds#new"
+  get "/sounds/:id", to: "sounds#show"
+  post "/sounds", to: "sounds#create"
+  get "/sounds/:id/edit", to: "sounds#edit"
+  put "/sounds/:id", to: "videos#update"
+  delete "/sounds/:id", to: "sounds#destroy"
+
+#ask about create and update
+#ask about multiple roots on this page
+
+  get "/videos", to: "videos#index"
+  get "/videos/new", to: "videos#new"
+  get "/videos/:id", to: "videos#show"
+  post '/videos', to: 'videos#create'
+  get '/videos/:id/edit', to: 'videos#edit'
+  put "/videos/:id", to: "videos#update"
+  delete '/videos/:id', to: 'videos#destroy'
 
 
 

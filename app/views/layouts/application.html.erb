@@ -7,6 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<script src="http://connect.soundcloud.com/sdk.js"></script>
+<script>
+console.log(SC);
+
+  SC.initialize({
+  client_id: 'YOUR_CLIENT_ID',
+  redirect_uri: 'REDIRECT_URL'
+});
+</script>
 
 <%= yield %>
 
